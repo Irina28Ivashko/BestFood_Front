@@ -1,0 +1,38 @@
+.fieldsContainer {
+  display: flex;
+
+  gap: 10px;
+  //margin-bottom: 10px; // Добавляем отступ снизу для разделения от других элементов
+
+  .tagsDisplay {
+    max-width: 50%; // Уменьшение ширины строки с тегами
+    margin-top: 10px; // Отступ сверху для строки с тегами
+    align-self: center; // Выравнивание по центру
+  }
+  .autocompleteField {
+    width: 50%; // Установка ширины поля выбора
+    //flex: 1; // Для равного распределения ширины между полями
+    .MuiFormControl-root {
+      width: 50%; // Растягиваем элемент на всю ширину родителя
+    }
+
+    .MuiInputBase-root {
+      color: #333; // Цвет текста
+    }
+
+    .MuiInputLabel-root {
+      color: #666; // Цвет метки поля
+    }
+
+    .MuiOutlinedInput-root {
+      // Стили границы поля
+      &:hover {
+        border-color: #999;
+      }
+
+      &.Mui-focused {
+        border-color: #333;
+      }
+    }
+  }
+}

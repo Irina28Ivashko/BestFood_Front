@@ -1,0 +1,41 @@
+.recipeBlockContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+
+  .recipeBlock {
+    flex-grow: 0; // Изменено с flex: 1
+    flex-shrink: 0;
+    width: 280px; // Пример фиксированной ширины
+  }
+}
+
+/* Медиазапрос для экранов меньше 768px */
+@media (max-width: 768px) {
+  .recipeBlockContainer {
+    grid-template-columns: repeat(1, minmax(280px, 1fr)); /* Отображать по 2 элемента в ряд */
+  }
+}
+
+/* Медиазапрос для очень маленьких экранов, например, мобильных телефонов */
+@media (max-width: 480px) {
+  .recipeBlockContainer {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Отображать по 1 элементу в ряд на мобильных телефонах */
+  }
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.pagination {
+  display: inline-block; // Для центрирования пагинации
+}

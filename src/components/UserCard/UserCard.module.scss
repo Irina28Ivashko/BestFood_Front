@@ -1,0 +1,63 @@
+.userCard {
+  transition: transform 0.3s ease-in-out; /* Анимация перехода */
+  cursor: pointer;
+}
+
+.userCard:hover {
+  transform: scale(1.05); /* Увеличение размера карточки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта всплытия */
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.rank {
+  font-weight: bold;
+}
+
+.rankNumber {
+  background-color: rgba(58, 49, 49, 0.5); /* Цвет фона для кружка */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  // display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+//  фон карточек юзера
+.gold {
+  background-color: gold !important;
+  border: 1px solid black;
+}
+
+.silver {
+  background-color: silver !important;
+  border: 1px solid black;
+}
+
+.bronze {
+  background-color: #cd7f32 !important; // Цвет бронзы
+  border: 1px solid black;
+}
+
+.lightGreen {
+  background-color: #90ee90 !important; // Нежно-зеленый
+  border: 1px solid black;
+}
+
+.lightBlue {
+  background-color: #add8e6 !important; // Нежно-голубой
+  border: 1px solid black;
+}

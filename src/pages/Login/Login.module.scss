@@ -1,0 +1,58 @@
+.root {
+  width: 400px;
+  padding: 50px;
+  border: 1px solid #dedede;
+  margin: 50px auto;
+}
+
+.field {
+  margin-bottom: 20px !important;
+}
+
+.title {
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-bottom: 30px !important;
+}
+
+.buttonRegister {
+  background: none; /* Убираем фон */
+  color: #007bff; /* Цвет текста, можно выбрать любой */
+  border: none; /* Убираем рамку */
+  padding: 0; /* Убираем отступы */
+  font: inherit; /* Наследуем шрифт от родителя */
+  cursor: pointer; /* Меняем курсор на указывающий палец */
+  text-decoration: underline; /* Подчеркиваем текст */
+  margin-top: 30px; /* Отступ сверху */
+  display: block; /* Делаем элемент блочным для возможности центрирования */
+  margin-left: auto; /* Автоматический отступ слева */
+  margin-right: auto; /* Автоматический отступ справа */
+  text-align: center; /* Центрируем текст внутри */
+}
+
+.buttonRegister:hover,
+.buttonRegister:focus {
+  color: #0056b3; /* Цвет текста при наведении и фокусе, можно выбрать любой */
+  text-decoration: none; /* Убираем подчеркивание при наведении и фокусе */
+}
+
+.buttonPassword {
+  background: none; /* Убираем фон */
+  color: #007bff; /* Цвет текста, можно выбрать любой */
+  border: none; /* Убираем рамку */
+  padding: 0; /* Убираем отступы */
+  font: inherit; /* Наследуем шрифт от родителя */
+  cursor: pointer; /* Меняем курсор на указывающий палец */
+  text-decoration: underline; /* Подчеркиваем текст */
+  margin-top: 30px; /* Отступ сверху */
+  display: block; /* Делаем элемент блочным для возможности центрирования */
+  margin-left: auto; /* Автоматический отступ слева */
+  margin-right: auto; /* Автоматический отступ справа */
+  text-align: center; /* Центрируем текст внутри */
+}
+
+.buttonPassword:hover,
+.buttonPassword:focus {
+  color: #0056b3; /* Цвет текста при наведении и фокусе, можно выбрать любой */
+  text-decoration: none; /* Убираем подчеркивание при наведении и фокусе */
+}

@@ -1,0 +1,51 @@
+.ingredientsContainer {
+  margin-top: 60px;
+
+  .ingredientRow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .ingredientName {
+      flex: 1 1 auto; /* Изменено для управления размером */
+      width: auto; /* Изменено для управления размером */
+      margin-right: 8px;
+    }
+
+    .ingredientAmount,
+    .ingredientUnit {
+      margin-right: 8px;
+      flex: none; /* Добавлено для предотвращения растягивания */
+    }
+
+    .ingredientUnit {
+      min-width: 120px;
+    }
+
+    .deleteButton {
+      color: rgb(118, 128, 128);
+      margin-left: 8px;
+    }
+  }
+
+  .searchResultsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+
+  .addIngredientButton {
+    margin-top: 40px;
+    margin-bottom: 70px !important;
+  }
+}
+
+.invalidInput {
+  border: 1px solid red; /* или background-color для подсветки фона */
+}

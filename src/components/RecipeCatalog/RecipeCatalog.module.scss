@@ -1,0 +1,155 @@
+.catalogContainer {
+  background-color: #efe8db;
+  overflow-y: auto;
+}
+
+@media (min-width: 1280px) {
+  .catalogContainer {
+    /* Стили для отображения каталога на экранах 1280px и более */
+    position: static;
+    width: auto; /* Или другая ширина, подходящая для вашего дизайна */
+    height: auto;
+    transform: none;
+    display: block; /* Всегда показывать каталог на экранах 1280px и больше */
+  }
+
+  .toggleButton,
+  .closeButton {
+    display: none; /* Скрываем кнопки на десктопных экранах */
+  }
+}
+
+@media (max-width: 1279px) {
+  /* Стили для мобильных устройств (меньше 1280px) */
+  .toggleButton {
+    /* Показываем бургер-кнопку */
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    background-color: #544f4f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .catalogContainer {
+    /* Скрытие каталога по умолчанию и настройка анимации для плавного появления */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Можете настроить ширину */
+    height: 100vh;
+    transform: translateX(-100%);
+    // transition: transform 0.3s ease;
+    // z-index: 1000;
+    display: none; /* Скрыт, пока не будет активирован */
+  }
+
+  .catalogContainer.show {
+    /* Показ каталога при активации */
+    display: block;
+    transform: translateX(0);
+  }
+
+  .closeButton {
+    /* Показываем кнопку закрытия каталога */
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 24px;
+  }
+}
+
+/* Стиль для скрытия элемента */
+.hide {
+  display: none;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.catalogTitle {
+  background-color: #efe8db;
+  color: #000000;
+
+  margin-bottom: 10px;
+  text-align: center;
+
+  padding-bottom: 15px 0;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.scrollableSection {
+  max-height: 800px;
+  // overflow-y: auto;
+  overflow-y: hidden; /* Скрываем скроллбар по умолчанию */
+  width: 100%;
+  position: relative;
+
+  &:hover {
+    overflow-y: auto; /* Показываем скроллбар при наведении */
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px; /* Ширина скролла для Chrome, Safari и других WebKit браузеров */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #dedede; /* Цвет дорожки скролла */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #630909; /* Цвет самого скролла */
+    border-radius: 10px;
+    border: 3px solid #dedede; /* Делает скролл "плавающим" */
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #dedede; /* Цвет скролла при наведении */
+    }
+  }
+}
+
+.categorySection {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.categoryTitle {
+  color: #630909;
+  margin-bottom: 10px;
+}
+
+.catalogList {
+  list-style: none;
+  padding: 10px;
+}
+
+.catalogItem {
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.catalogLink {
+  text-decoration: none;
+  color: #0a0a0a;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #0b081a;
+  }
+}

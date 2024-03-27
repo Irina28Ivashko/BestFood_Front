@@ -1,0 +1,45 @@
+.root {
+  width: 400px;
+  padding: 50px;
+  border: 1px solid #dedede;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+}
+
+.field {
+  margin-bottom: 20px !important;
+  width: 100%; // Для полной ширины
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.uploadButton {
+  margin-bottom: 40px !important;
+}
+
+.text {
+  margin-bottom: 6px;
+  color: #8d8787;
+  padding-bottom: 10px;
+  font-size: 12px;
+}

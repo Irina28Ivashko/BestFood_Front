@@ -1,0 +1,66 @@
+.profile {
+  position: relative;
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    svg {
+      margin-right: 5px; // Отступ справа от иконки
+    }
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+
+  .logoutButton {
+    width: 100%;
+    background-color: transparent;
+    // background-color: #f9f9f9; // Цвет фона кнопки
+    color: #2c2c2c; // Цвет текста кнопки
+    border: none;
+
+    transition: background-color 0.3s; // Плавный переход для фона
+
+    text-align: left; // Текст выравниваем по левому краю
+    padding: 15px; // Устанавливаем отступы, аналогичные остальным элементам списка
+    transition: background-color 0.3s; // Плавный переход для фона
+
+    &:hover {
+      background-color: #e0e0e0; // Цвет фона при наведении
+      color: #000;
+    }
+  }
+}

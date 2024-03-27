@@ -1,0 +1,113 @@
+.container {
+  padding: 30px;
+}
+
+.uploadSection {
+  text-align: center; /* Центрирование кнопки и изображения */
+  margin-bottom: 20px; /* Отступ снизу для разделения от следующих элементов */
+}
+
+.uploadButton {
+  // padding: 20px;
+  display: block; // Для возможности применения margin auto
+  margin: 0 auto; // Центрирование и добавление отступа сверху и снизу
+}
+
+.image {
+  display: block; /* Это делает элемент блочным */
+  margin: 30px auto;
+
+  width: 300px; // Размеры можно регулировать
+  height: 200px;
+}
+
+/* Стили для полей ввода */
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: 2rem;
+}
+
+.centeredTextField {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; // Отступ сверху для разделения элементов
+
+  margin-bottom: 70px; // Отступ снизу
+}
+
+.textField {
+  width: 80%; // Установите желаемую ширину
+}
+
+.wordCount {
+  text-align: right; // Выравнивание текста справа
+  margin-top: -50px; // Отрицательный отступ сверху для приближения к полю ввода
+  margin-bottom: 70px; // Отступ снизу
+  font-size: 0.85rem; // Размер шрифта для счетчика
+  color: #666; // Цвет текста (можете выбрать свой)
+}
+
+.recipeTitleField {
+  display: block;
+  margin: 0 auto; // Центрирование поля
+  margin-bottom: 70px; // Отступ снизу
+  width: 50%; // Установление ширины
+  text-align: center;
+}
+
+.errorField {
+  border: 2px solid red;
+}
+
+.descriptionEditor {
+  max-width: 70%; // Уменьшение ширины поля редактора
+  margin: auto; // Центрирование поля редактора
+  margin-bottom: 60px; // Отступ снизу
+
+  label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+input,
+textarea {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Стили для редактора Markdown */
+.editor {
+  margin-bottom: 30px;
+
+  :global {
+    .cm-s-easymde {
+      font-size: 16px;
+    }
+    .editor-toolbar {
+      background-color: rgb(0 0 0 / 2%);
+    }
+  }
+}
+
+/* Стили для кнопок */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    margin-right: 15px;
+  }
+}
+
+/* Стили для шагов рецепта */
+.steps {
+  margin-top: 30px;
+
+  .step {
+    margin-bottom: 30px;
+  }
+}

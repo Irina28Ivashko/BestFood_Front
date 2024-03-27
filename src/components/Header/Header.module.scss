@@ -1,0 +1,142 @@
+.header {
+  border-bottom: 1px solid #f6f6f6;
+  padding: 40px 0 25px;
+  padding-right: 90px;
+  background-color: #fff;
+  margin-bottom: 30px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .leftSection {
+      flex: 1; // Устанавливаем базовый размер
+      // Стили для логотипа
+    }
+
+    .centerSection {
+      flex: 2; // Устанавливаем базовый размер, чтобы центральная колонка была больше
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 645px) {
+      flex-direction: column;
+      .header__cart {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    .logoContent {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 15px;
+      }
+
+      h1 {
+        color: #0b0b0b;
+        font-size: 20px;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: #f4f9f5;
+      }
+    }
+
+    .buttons {
+      button {
+        margin-left: 40px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .logo h1 {
+      display: none; /* Скрываем текст логотипа на экранах 1280px и меньше */
+    }
+  }
+
+  @media (max-width: 640px) {
+    .logo img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 280px) {
+    .logo {
+      margin-left: -20px;
+    }
+  }
+
+  .rightSection {
+    display: flex;
+    align-items: center;
+    gap: 13px; // Отступ между элементами
+
+    .authButtons {
+      display: flex;
+      align-items: center;
+      gap: 10px; // Отступ между кнопками
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        font-size: 0.8em; // Уменьшаем шрифт
+        padding: 6px 12px; // Уменьшаем размер кнопок
+      }
+    }
+
+    .favoritesLink {
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+      margin-left: 20px; // Уменьшаем шрифт
+
+      background-color: transparent;
+
+      &:hover {
+        background-color: #f9f9f9; // Цвет фона при наведении
+        color: #000;
+      }
+
+      span {
+        margin-left: 5px;
+        // font-size: 0.8em; // Отступ между иконкой и текстом
+      }
+    }
+    .profile {
+      margin-left: 20px; // Увеличиваем отступ слева, чтобы сдвинуть профиль правее
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .favoritesLink span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .favoritesLink {
+    display: none !important;
+  }
+}

@@ -1,0 +1,201 @@
+.recipeBlock {
+  position: relative;
+
+  width: 280px;
+  height: 450px;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.3s ease; /* Плавное изменение размера */
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #dbdde2;
+    box-shadow: 0 0 0 1px #dbdde2;
+
+    .editButtons {
+      opacity: 1;
+      visibility: visible; // Делаем кнопки видимыми при наведении
+    }
+  }
+
+  .editButtons {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+  }
+}
+
+// Стили для кнопок внутри .editButtons
+.editButtons .MuiIconButton-root {
+  background-color: #fff; // Фон кнопок
+  border: 1px solid #ccc; // Граница кнопок
+
+  &:hover {
+    background-color: #f9f9f9; // Цвет фона при наведении
+  }
+}
+
+.recipeBlock:hover {
+  transform: scale(1.05); /* Увеличение размера при наведении */
+}
+
+.recipeBlockLink {
+  display: block; /* Установите нужный display в зависимости от вашей верстки */
+  color: inherit; /* Цвет текста остается прежним */
+  text-decoration: none; /* Убрать подчеркивание ссылки */
+}
+
+/* Для устранения конфликтов с padding внутренних элементов */
+.recipeBlockLink * {
+  pointer-events: none;
+}
+
+.recipeBlockLink {
+  pointer-events: auto;
+}
+
+.recipeBlockImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recipeBlockContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.recipeBlockInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.calories,
+.time {
+  display: flex;
+  align-items: center;
+
+  svg {
+    font-size: 18px; // Уменьшенный размер иконок калькулятора и часов
+    margin-right: 5px;
+  }
+}
+
+.recipeBlockTitle {
+  font-size: 14px;
+  margin: 10px 5px 0; /* Уменьшение верхнего и бокового отступа */
+  line-height: 1.2; /* Для улучшения читаемости */
+}
+
+.recipeBlockDescription {
+  font-size: 12px;
+
+  margin: 0 5px; /* Уменьшение отступа */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.recipeBlockActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+
+  .actionItem {
+    display: flex;
+    align-items: center;
+  }
+
+  .actionItem svg {
+    margin-right: 2px;
+    font-size: 16px;
+    color: #757575;
+  }
+
+  span {
+    margin-left: 2px; /* Уменьшение левого отступа для текста */
+    font-size: 12px;
+    color: #757575;
+  }
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  //margin: 0 5px;
+
+  svg {
+    font-size: 20px; //  отдельно установить размер для иконок в кнопках
+  }
+}
+
+.added,
+.liked {
+  color: red;
+}
+
+.views,
+.comments {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 5px 0;
+}
+
+.skeleton {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  &Content {
+    padding: 20px;
+  }
+
+  &Info {
+    margin-left: 50px;
+  }
+}
+
+.skeletonUser {
+  display: flex;
+
+  &Details {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.skeletonTags {
+  display: flex;
+
+  span {
+    margin-right: 15px;
+  }
+}

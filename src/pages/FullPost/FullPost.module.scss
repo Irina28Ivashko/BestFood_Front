@@ -1,0 +1,64 @@
+.container {
+  max-width: 750px; /* Максимальная ширина контейнера статьи */
+  margin: 20px auto; /* Центрирование контейнера на странице с верхним и нижним отступом */
+  padding: 20px; /* Внутренние отступы контейнера */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера для лучшего визуального отделения */
+  border-radius: 8px; /* Скругление углов контейнера */
+  background: white; /* Белый фон контейнера */
+}
+
+.imageFullPost {
+  width: 100%; /* Ширина изображения относительно контейнера */
+  max-width: 600px; /* Максимальная ширина изображения */
+  height: 400px;
+  //   object-fit: contain;
+  //   height: auto; /* Высота изменяется автоматически, сохраняя пропорции изображения */
+  object-fit: cover; /* обрезает изображение, сохраняя пропорции, чтобы оно заполняло контейнер */
+  margin: 0 auto 20px; /* Центрирование изображения с верхним и нижним отступом */
+  border-radius: 4px; /* Скругление углов изображения */
+  display: block;
+}
+
+/* Стили для содержимого полной статьи */
+.contentWrapper {
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(245, 242, 242, 0.1);
+  margin-bottom: 20px;
+  max-width: 800px; /* Максимальная ширина контейнера */
+  margin-left: auto; /* Центрирование по горизонтали */
+  margin-right: auto;
+
+  padding: 20px 20px;
+}
+
+.fullPostTitle {
+  font-size: 42px;
+  font-weight: 900;
+  // margin-bottom: 20px;
+
+  margin: 30px 0;
+}
+
+.fullPostText {
+  font-size: 22px;
+  line-height: 36px;
+  margin-top: 40px;
+}
+
+.postContent {
+  max-width: 600px !important;
+  margin-bottom: 40px;
+}
+
+.postDetails {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}

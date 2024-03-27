@@ -1,0 +1,25 @@
+.Container {
+  flex-direction: column;
+
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.addButton {
+  margin-top: 10px;
+  background-color: #199f5e;
+  color: white;
+}
+
+.measurements {
+  margin-top: 10px;
+}

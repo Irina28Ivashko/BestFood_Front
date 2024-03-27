@@ -1,0 +1,55 @@
+.stepsContainer {
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  .stepHeader {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .stepInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .stepNumber {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }
+
+  .photoPreview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+  }
+
+  .stepDescription {
+    flex-grow: 1;
+    width: 70%;
+    margin-right: 10px;
+  }
+
+  .deleteButton {
+    color: rgb(118, 128, 128);
+    margin-top: 10px;
+  }
+}
+
+.addButton {
+  margin-top: 20px;
+  margin-bottom: 70px !important;
+}

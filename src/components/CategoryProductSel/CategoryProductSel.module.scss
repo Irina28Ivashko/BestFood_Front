@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.category {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.products {
+  margin-left: 20px;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+
+  input[type='checkbox'] {
+    margin-right: 10px;
+  }
+}
+
+.productItem {
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.category.active,
+.product.active {
+  background-color: #e7e7e7;
+}
+
+.applyButton {
+  padding: 10px 20px;
+  // width: auto;
+  max-width: 200px;
+  display: block; /* Делаем кнопку блочным элементом для возможности центрирования */
+  background-color: #199f5e; /* Зеленый цвет фона */
+  color: white; /* Цвет текста */
+  border: none; /* Убираем рамку */
+  border-radius: 5px; /* Скругляем углы */
+  cursor: pointer; /* Курсор в виде указателя */
+  font-size: 14px; /* Уменьшаем размер шрифта, если нужно */
+  text-align: center; /* Текст по центру */
+}
+
+.categoryIndicator {
+  transition: transform 0.3s ease;
+  margin-right: 7px;
+
+  &.active {
+    transform: rotate(180deg); // Повернуть иконку на 180 градусов при активации
+  }
+}

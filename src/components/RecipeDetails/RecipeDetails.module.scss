@@ -1,0 +1,39 @@
+.detailsWrapper {
+  padding-bottom: 70px; // Добавление отступа снизу
+}
+
+.detailsContainer {
+  .tinyInput {
+    .MuiInputBase-root {
+      font-size: 0.55rem; // Уменьшаем размер шрифта
+    }
+    .MuiInputLabel-root {
+      font-size: 0.55rem; // Уменьшаем размер шрифта метки
+    }
+    .MuiFormControl-root {
+      margin-top: 0;
+    }
+    .MuiOutlinedInput-input {
+      padding: 4px 8px; // Уменьшаем внутренние отступы
+    }
+  }
+
+  .label {
+    font-size: 1rem; // Уменьшаем размер шрифта метки для количества порций
+    margin-bottom: 4px;
+  }
+
+  // .tinyInput {
+  //   .MuiInputBase-input {
+  //     font-size: 14px; // Уменьшение размера шрифта
+  //     padding: 6px 10px; // Уменьшение паддинга
+  //   }
+  // }
+
+  .timeContainer {
+    text-align: center; // Выравнивание заголовка по центру
+    .MuiGrid-container {
+      justify-content: center; // Центрирование контейнера с часами и минутами
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.container {
+  margin-top: 80px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+// .title {
+//   // стили для подзаголовка
+// }
+
+.portionsControl {
+  display: flex;
+  align-items: center;
+  color: black;
+
+  .portionsLabel {
+    margin-right: 10px; // Отступ от слова "Порции"
+  }
+
+  .controlButton {
+    min-width: 30px;
+    height: 30px;
+    padding: 0;
+    color: black; // Цвет кнопок
+  }
+
+  .portionsInput {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+
+    -moz-appearance: textfield; // Убираем стрелки увеличения/уменьшения числа
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.ingredientsList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.ingredientItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 10px; // Отступ снизу для каждого элемента списка
+}
+
+// .ingredientItem {
+//   display: flex;
+//   justify-content: space-between;
+//   border-bottom: 1px solid #ccc; // граница для отделения элементов списка
+//   padding: 5px 0;
+// }
+
+.ingredientName {
+  flex: 1;
+  position: relative;
+}
+
+.ingredientName::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 55px;
+  right: 0px; // Растягивает линию до следующего элемента, регулируйте по необходимости
+  border-bottom: 1px solid #ccc; // Цвет и толщина линии
+}
+
+.ingredientAmount {
+  white-space: nowrap; // Чтобы текст оставался в одну строку
+}

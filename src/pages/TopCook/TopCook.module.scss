@@ -1,0 +1,46 @@
+// .topCooksContainer {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr); // 4 колонки с равной шириной
+//   grid-gap: 20px; // Пробелы между карточками
+//   margin: 20px; // Отступ от краев контейнера
+
+//   @media (max-width: 1200px) {
+//     grid-template-columns: repeat(3, 1fr); // 3 колонки для меньших экранов
+//   }
+
+//   @media (max-width: 900px) {
+//     grid-template-columns: repeat(2, 1fr); // 2 колонки для еще меньших экранов
+//   }
+
+//   @media (max-width: 600px) {
+//     grid-template-columns: 1fr; // 1 колонка для мобильных устройств
+//   }
+// }
+
+.topCooksContainer {
+  margin: 20px; // Отступ от краев контейнера
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 колонки с равной шириной
+    grid-gap: 20px; // Пробелы между карточками
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr); // 3 колонки для меньших экранов
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr); // 2 колонки для еще меньших экранов
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr; // 1 колонка для мобильных устройств
+    }
+  }
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
