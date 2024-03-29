@@ -13,8 +13,19 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
   //  создание начального объекта шага
   const createInitialStep = () => ({ imageUrl: '', description: '' });
 
+  const [steps, setSteps] = useState([
+    {
+      imageUrl: '',
+      description: '',
+    },
+    {
+      imageUrl: '',
+      description: '',
+    },
+  ]);
+
   //  создание двух начальных шагов
-  const [steps, setSteps] = useState([createInitialStep(), createInitialStep()]);
+  // const [steps, setSteps] = useState([createInitialStep(), createInitialStep()]);
 
   useEffect(() => {
     if (initialSteps) {
@@ -55,7 +66,11 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
       );
       // После успешной загрузки обновляем URL изображения в соответствующем шаге
       if (data.url) {
-        handleStepChange(index, 'imageUrl', `https://bestfood-back-2qsm.onrender.com${data.url}`);
+        const newSteps = [...steps];
+        newSteps[index].imageUrl = `https://bestfood-back-2qsm.onrender.com${data.url}`;
+        setSteps(newSteps);
+        onStepsChange(newSteps);
+        // handleStepChange(index, 'imageUrl', `https://bestfood-back-2qsm.onrender.com${data.url}`);
       }
       // Дальнейшая обработка ответа сервера
     } catch (error) {
@@ -65,16 +80,28 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
 
   // Функция для обработки изменений в шагах
   const handleStepChange = (index, field, value) => {
-    const updatedSteps = [...steps];
-    updatedSteps[index][field] = value;
-    setSteps(updatedSteps); // Обновление состояния шагов
-    onStepsChange(updatedSteps);
+    const newSteps = [...steps];
+    newSteps[index][field] = value;
+    setSteps(newSteps);
+    onStepsChange(newSteps);
   };
+  // const handleStepChange = (index, field, value) => {
+  //   const updatedSteps = [...steps];
+  //   updatedSteps[index][field] = value;
+  //   setSteps(updatedSteps); // Обновление состояния шагов
+  //   onStepsChange(updatedSteps);
+  // };
 
   // Функция для удаления изображения
   const handleDeleteImage = (index) => {
-    handleStepChange(index, 'imageUrl', '');
+    const newSteps = [...steps];
+    newSteps[index].imageUrl = '';
+    setSteps(newSteps);
+    onStepsChange(newSteps);
   };
+  // const handleDeleteImage = (index) => {
+  //   handleStepChange(index, 'imageUrl', '');
+  // };
 
   // Функция для добавления нового шага
   const addStep = () => {

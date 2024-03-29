@@ -69,7 +69,7 @@ export const FullPost = () => {
           viewsCount={data.viewsCount}
           commentsCount={comments.length}
           isFullPost></Post>
-        <ReactMarkdown children={data.text} />
+        {/* <ReactMarkdown children={data.text} /> */}
       </div>
 
       <div className={styles.contentWrapper}>
