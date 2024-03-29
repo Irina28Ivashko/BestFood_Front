@@ -81,14 +81,12 @@ export const ProfileSettings = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Отправляемые данные:', { fullName, avatarUrl });
     const formData = new FormData();
     formData.append('fullName', fullName);
     formData.append('avatarUrl', avatarUrl);
 
     // Обновление данных профиля
     const updateResponse = await dispatch(updateProfile(formData));
-    console.log('Ответ сервера на обновление профиля:', updateResponse);
 
     if (updateProfile.fulfilled.match(updateResponse)) {
       // Если запрос успешный, обновляем локальные данные

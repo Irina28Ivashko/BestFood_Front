@@ -13,16 +13,7 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
   //  создание начального объекта шага
   const createInitialStep = () => ({ imageUrl: '', description: '' });
 
-  const [steps, setSteps] = useState([
-    {
-      imageUrl: '',
-      description: '',
-    },
-    {
-      imageUrl: '',
-      description: '',
-    },
-  ]);
+  const [steps, setSteps] = useState(initialSteps || [{ imageUrl: '', description: '' }]);
 
   //  создание двух начальных шагов
   // const [steps, setSteps] = useState([createInitialStep(), createInitialStep()]);
@@ -38,7 +29,7 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
     const token = localStorage.getItem('token'); // Получение токена
 
     const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/tiff'];
-    const maxSizeMB = 1; // Максимальный размер файла в МБ теперь 3 МБ
+    const maxSizeMB = 3; // Максимальный размер файла в МБ
     const maxSizeBytes = maxSizeMB * 1024 * 1024; // Пересчитываем максимальный размер файла в байтах
 
     if (!allowedTypes.includes(file.type)) {
@@ -65,16 +56,27 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
         },
       );
       // После успешной загрузки обновляем URL изображения в соответствующем шаге
-      if (data.url) {
-        const newSteps = [...steps];
-        newSteps[index].imageUrl = `https://bestfood-back-2qsm.onrender.com${data.url}`;
-        setSteps(newSteps);
-        onStepsChange(newSteps);
-        // handleStepChange(index, 'imageUrl', `https://bestfood-back-2qsm.onrender.com${data.url}`);
-      }
+      // if (data.url) {
+      //   const newSteps = [...steps];
+      //   newSteps[index].imageUrl = `https://bestfood-back-2qsm.onrender.com${data.url}`;
+      //   setSteps(newSteps);
+      //   onStepsChange(newSteps);
+      //   // handleStepChange(index, 'imageUrl', `https://bestfood-back-2qsm.onrender.com${data.url}`);
+      // }
+
+      const updatedSteps = steps.map((step, stepIndex) => {
+        if (index === stepIndex) {
+          return { ...step, imageUrl: `https://bestfood-back-2qsm.onrender.com${data.url}` };
+        }
+        return step;
+      });
+      setSteps(updatedSteps);
+      onStepsChange(updatedSteps);
+
       // Дальнейшая обработка ответа сервера
     } catch (error) {
       console.error('Ошибка при загрузке изображения:', error);
+      alert('Не удалось загрузить изображение. Попробуйте ещё раз.');
     }
   };
 
@@ -94,8 +96,12 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
 
   // Функция для удаления изображения
   const handleDeleteImage = (index) => {
-    const newSteps = [...steps];
-    newSteps[index].imageUrl = '';
+    const newSteps = steps.map((step, stepIndex) => {
+      if (index === stepIndex) {
+        return { ...step, imageUrl: '' };
+      }
+      return step;
+    });
     setSteps(newSteps);
     onStepsChange(newSteps);
   };
