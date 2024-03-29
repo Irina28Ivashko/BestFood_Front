@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:4445',
+  baseURL: 'https://bestfood-back-2qsm.onrender.com',
 });
 
 // когда порисходит любой запрос, всегда проверяй есть ли в localstorage что-то и вшивай это в инфу Authorization

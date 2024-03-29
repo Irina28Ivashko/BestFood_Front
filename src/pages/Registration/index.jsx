@@ -26,9 +26,9 @@ export const Registration = () => {
   } = useForm({
     // Начальные значения формы
     defaultValues: {
-      fullName: 'Мистер Фредди',
-      email: 'test@test.ru',
-      password: '1324',
+      fullName: '',
+      email: '',
+      password: '',
     },
     mode: 'onChange', // Валидация при изменении
   });
