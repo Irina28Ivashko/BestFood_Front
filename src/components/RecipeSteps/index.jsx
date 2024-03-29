@@ -44,14 +44,18 @@ export const RecipeSteps = ({ initialSteps, onStepsChange }) => {
     formData.append('image', file);
 
     try {
-      const { data } = await axios.post('http://localhost:4445/upload', formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const { data } = await axios.post(
+        'https://bestfood-back-2qsm.onrender.com/upload',
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
       // После успешной загрузки обновляем URL изображения в соответствующем шаге
       if (data.url) {
-        handleStepChange(index, 'imageUrl', `http://localhost:4445${data.url}`);
+        handleStepChange(index, 'imageUrl', `https://bestfood-back-2qsm.onrender.com${data.url}`);
       }
       // Дальнейшая обработка ответа сервера
     } catch (error) {

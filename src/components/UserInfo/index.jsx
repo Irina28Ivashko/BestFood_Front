@@ -9,7 +9,7 @@ export const UserInfo = ({ fullName, avatarUrl, additionalText }) => {
   const fullAvatarUrl =
     avatarUrl && avatarUrl.startsWith('http')
       ? avatarUrl
-      : `http://localhost:4445${avatarUrl || ''}`;
+      : `https://bestfood-back-2qsm.onrender.com${avatarUrl || ''}`;
 
   return (
     <div className={styles.root}>

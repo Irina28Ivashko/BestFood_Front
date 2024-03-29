@@ -190,7 +190,11 @@ export const FullRecipe = ({ likesCount }) => {
           <Recipe
             id={recipeData._id}
             title={recipeData.title}
-            imageUrl={recipeData.imageUrl ? `http://localhost:4445${recipeData.imageUrl}` : ''}
+            imageUrl={
+              recipeData.imageUrl
+                ? `https://bestfood-back-2qsm.onrender.com${recipeData.imageUrl}`
+                : ''
+            }
             user={recipeData.user}
             createdAt={recipeData.createdAt}
             tags={recipeData.tags}

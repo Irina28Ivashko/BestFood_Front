@@ -140,7 +140,7 @@ export const RecipeBlock = ({
   // Проверка на наличие imageUrl
   const imageSrc = imageUrl
     ? imageUrl.startsWith('/uploads')
-      ? `http://localhost:4445${imageUrl}`
+      ? `https://bestfood-back-2qsm.onrender.com${imageUrl}`
       : imageUrl
     : 'путь_к_заглушке_изображения';
 

@@ -72,7 +72,11 @@ export const Home = () => {
                     user={recipe.user}
                     tags={recipe.tags}
                     title={recipe.title}
-                    imageUrl={recipe.imageUrl ? `http://localhost:4445${recipe.imageUrl}` : ''}
+                    imageUrl={
+                      recipe.imageUrl
+                        ? `https://bestfood-back-2qsm.onrender.com${recipe.imageUrl}`
+                        : ''
+                    }
                     calories={recipe.totalCalories ? recipe.totalCalories.toFixed(2) : 0}
                     formattedCookingTime={formatCookingTime(recipe.cookingTime)}
                     viewsCount={recipe.viewsCount}
@@ -111,7 +115,9 @@ export const Home = () => {
                 id={post._id}
                 title={post.title}
                 createdAt={post.createdAt}
-                imageUrl={post.imageUrl ? `http://localhost:4445${post.imageUrl}` : ''}
+                imageUrl={
+                  post.imageUrl ? `https://bestfood-back-2qsm.onrender.com${post.imageUrl}` : ''
+                }
                 user={post.user}
                 viewsCount={post.viewsCount}
                 commentsCount={post.commentsCount}

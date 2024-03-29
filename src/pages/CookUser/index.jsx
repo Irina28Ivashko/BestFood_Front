@@ -59,7 +59,7 @@ export const CookUser = () => {
   // Формирование полного URL аватара
   const fullAvatarUrl = userProfile.avatarUrl.startsWith('http')
     ? userProfile.avatarUrl
-    : `http://localhost:4445${userProfile.avatarUrl}`;
+    : `https://bestfood-back-2qsm.onrender.com${userProfile.avatarUrl}`;
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
@@ -147,7 +147,9 @@ export const CookUser = () => {
                     id={post._id}
                     title={post.title}
                     createdAt={post.createdAt}
-                    imageUrl={post.imageUrl ? `http://localhost:4445${post.imageUrl}` : ''}
+                    imageUrl={
+                      post.imageUrl ? `https://bestfood-back-2qsm.onrender.com${post.imageUrl}` : ''
+                    }
                     user={post.user}
                     viewsCount={post.viewsCount}
                     commentsCount={post.commentsCount}

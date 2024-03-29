@@ -62,7 +62,11 @@ export const Post = ({
       {!isFullPost && imageUrl && (
         <img
           className={styles.image}
-          src={imageUrl.startsWith('/uploads') ? `http://localhost:4445${imageUrl}` : imageUrl}
+          src={
+            imageUrl.startsWith('/uploads')
+              ? `https://bestfood-back-2qsm.onrender.com${imageUrl}`
+              : imageUrl
+          }
           alt={title}
         />
       )}

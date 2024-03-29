@@ -158,7 +158,11 @@ export const AddPost = () => {
               className={styles.deleteButton}>
               Удалить
             </Button>
-            <img className={styles.image} src={`http://localhost:4445${imageUrl}`} alt="Uploaded" />
+            <img
+              className={styles.image}
+              src={`https://bestfood-back-2qsm.onrender.com${imageUrl}`}
+              alt="Uploaded"
+            />
           </>
         )}
       </div>

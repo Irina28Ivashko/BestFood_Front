@@ -55,7 +55,7 @@ export const FullPost = () => {
       {data.imageUrl && (
         <img
           className={styles.imageFullPost}
-          src={`http://localhost:4445${data.imageUrl}`}
+          src={`https://bestfood-back-2qsm.onrender.com${data.imageUrl}`}
           alt={data.title}
         />
       )}

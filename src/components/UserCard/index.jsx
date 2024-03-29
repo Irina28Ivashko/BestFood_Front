@@ -27,7 +27,7 @@ export const UserCard = ({ user, rank, lastActivityDate }) => {
   const fullAvatarUrl = user.avatarUrl
     ? user.avatarUrl.startsWith('http')
       ? user.avatarUrl
-      : `http://localhost:4445${user.avatarUrl}`
+      : `https://bestfood-back-2qsm.onrender.com${user.avatarUrl}`
     : defaultAvatar;
 
   //  для определения стиля фона в зависимости от ранга пользователя

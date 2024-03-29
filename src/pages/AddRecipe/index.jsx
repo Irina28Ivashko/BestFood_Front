@@ -239,7 +239,7 @@ export const AddRecipe = () => {
 
             <img
               className={styles.image}
-              src={`http://localhost:4445${recipeImageUrl}`}
+              src={`https://bestfood-back-2qsm.onrender.com${recipeImageUrl}`}
               alt="Uploaded"
             />
           </>

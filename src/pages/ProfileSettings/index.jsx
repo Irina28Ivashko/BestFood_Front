@@ -64,7 +64,7 @@ export const ProfileSettings = () => {
       const { data } = await axios.post('/upload', formData);
 
       // Обновление URL аватара с учетом нового изображения
-      const uploadedImageUrl = `http://localhost:4445${data.url}`;
+      const uploadedImageUrl = `https://bestfood-back-2qsm.onrender.com${data.url}`;
       const newAvatarUrlWithCacheBuster = `${uploadedImageUrl}?t=${new Date().getTime()}`;
 
       setAvatarUrl((prevUrl) => newAvatarUrlWithCacheBuster);
@@ -94,7 +94,7 @@ export const ProfileSettings = () => {
       // Если запрос успешный, обновляем локальные данные
       setFullName(updateResponse.payload.fullName);
       setAvatarUrl(
-        `http://localhost:4445${updateResponse.payload.avatarUrl}?t=${new Date().getTime()}`,
+        `https://bestfood-back-2qsm.onrender.com${updateResponse.payload.avatarUrl}?t=${new Date().getTime()}`,
       );
     }
     navigate('/');
