@@ -46,9 +46,15 @@ export const ColorTag = ({ content, url }) => {
   // Получаем класс цвета для текущего тега
   const tagColorClass = getTagColorClass(content);
 
+  const handleClick = (e) => {
+    // e.preventDefault(); // Это не нужно для Link, но показано для примера
+    e.stopPropagation(); // Предотвратить всплытие события к родительским элементам
+    // Дополнительная логика при необходимости
+  };
+
   // Возвращаем элемент Link с классом стиля, соответствующим категории
   return (
-    <Link to={url} className={`${styles.tag} ${tagColorClass}`}>
+    <Link to={url} className={`${styles.tag} ${tagColorClass}`} onClick={handleClick}>
       {content}
     </Link>
   );
